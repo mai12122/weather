@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div class="search-box">
+      <i class="bx bxs-map"></i>
+      <input type="text" class="city-input" placeholder="Enter location" />
+      <button class="search-btn"><i class="bx bx-search"></i></button>
+    </div>
+
+    <div class="search-city" style="display: none;">Searching...</div>
+    <div class="city-not-found" style="display: none;">City not found!</div>
+
+    <div class="weather-info" style="display: none; flex-direction: column;">
+      <h2 class="location-name">City Name</h2>
+      <img src="" alt="Weather Icon" class="weather-summary-img" />
+      <h3 class="temp-txt">0°C</h3>
+      <p class="condition-txt">Condition</p>
+
+      <div class="details">
+        <div class="detail-item">
+          <i class="bx bx-water"></i>
+          <div class="label">Humidity</div>
+          <div class="value humidity-value-txt">0%</div>
+        </div>
+        <div class="detail-item">
+          <i class="bx bx-wind"></i>
+          <div class="label">Wind</div>
+          <div class="value wind-speed-value-txt">0 km/h</div>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-thermometer-half"></i>
+          <div class="label">Feels Like</div>
+          <div class="value feels-like-value-txt">0°C</div>
+        </div>
+      </div>
+
+      <div class="forecast-item-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
