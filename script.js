@@ -1,10 +1,9 @@
+
 const cityInput = document.querySelector('.city-input');
 const searchBtn = document.querySelector('.search-btn');
 const searchCitySection = document.querySelector('.search-city');
 const notFoundSection = document.querySelector('.city-not-found');
 const weatherInfoSection = document.querySelector('.weather-info');
-
-const apiKey = '0af85a2d86a0fa1ad7824e0d82b7122a';
 
 searchBtn.addEventListener('click', () => {
     const city = cityInput.value.trim();
@@ -16,8 +15,9 @@ cityInput.addEventListener('keydown', (event) => {
         updateWeatherInfo(cityInput.value.trim());
     }
 });
+
 async function getFetchData(endpoint, city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=${apiKey}&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=${CONFIG.OPENWEATHER_API_KEY}&units=metric`;
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) throw new Error('City not found');
@@ -27,6 +27,7 @@ async function getFetchData(endpoint, city) {
         return null;
     }
 }
+
 async function updateWeatherInfo(city) {
     hideAllSections();
     searchCitySection.style.display = 'block';
@@ -51,6 +52,7 @@ async function updateWeatherInfo(city) {
         notFoundSection.style.display = 'block';
     }
 }
+
 function validateWeather(temp) {
     if (temp >= 35) return 'sunny';
     if (temp >= 25) return 'clear';
