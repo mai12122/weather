@@ -1,18 +1,45 @@
-#Project Title
+# 🌤️ WEATHER APP
 
-Weather App- Real Time Weather Forecast
+## 📌 PROJECT TITLE
 
-#Objective
-To create a responsive and interactive web application that allows users to check real-time weather conditions for any city using an API. The app displays temperature, weather conditions, humidity, wind speed, and a forecast overview in a modern, user-friendly interface.
+**WEATHER APP – REAL-TIME WEATHER FORECAST USING JAVASCRIPT**
 
-#How It Works
-- Users enter a city name into the search box.
-- The app fetches real-time weather data from an API (like OpenWeatherMap) using JavaScript.
-- If the city is found:
-- It displays the city name, temperature, weather condition, icon, humidity, wind speed, and "feels like" temperature.
-- A forecast (if implemented) is shown below the current weather.
-- If the city is not found:
-- A "City not found!" message is shown
+## 🎯 OBJECTIVE
 
-#Screenshots
+To design and build a responsive weather application using **HTML**, **CSS**, and **JavaScript** that fetches real-time weather data from an external API and displays key weather metrics such as:
+- Current temperature
+- Weather condition (e.g., cloudy, rainy)
+- Feels like temperature
+- Humidity
+- Wind speed
+- Forecast (optional)
+
+
+## ⚙️ HOW IT WORKS
+
+### 🔍 User Flow:
+1. The user enters the name of a city in the input field.
+2. On clicking the **Search** button:
+   - A loading message ("Searching...") appears.
+   - The app sends a request to the **OpenWeatherMap API** (or another weather API).
+3. If the city is found:
+   - The app displays:
+     - City name
+     - Temperature in °C
+     - Weather icon
+     - Condition (e.g., Clear, Cloudy)
+     - Humidity
+     - Wind speed
+     - Feels like temperature
+4. If the city is not found:
+   - A "City not found!" message is shown.
+
+### 🧠 Logic:
+- The API response is parsed using JavaScript.
+- DOM is updated dynamically without reloading the page.
+- UI feedback is provided for loading and error states.
+
+---
+
+## 🖼️ SCREENSHOTS
 ![alt text](image.png)
