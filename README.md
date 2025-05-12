@@ -1,10 +1,10 @@
-1. Project Title
+Project Title
 Weather App- Real Time Weather Forecast
 
-2. Objective
+Objective
 To create a responsive and interactive web application that allows users to check real-time weather conditions for any city using an API. The app displays temperature, weather conditions, humidity, wind speed, and a forecast overview in a modern, user-friendly interface.
 
-3. How It Works
+How It Works
 - Users enter a city name into the search box.
 - The app fetches real-time weather data from an API (like OpenWeatherMap) using JavaScript.
 - If the city is found:
